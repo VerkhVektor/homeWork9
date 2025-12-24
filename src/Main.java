@@ -1,13 +1,61 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+    //задача 1
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+    float [] inputArray1 = {32, 12, 44, 56, 85};
+    float [] outputArray1 = new float[4];
+
+    for (float sum : inputArray1){
+        outputArray1 [0] += sum;
     }
-}
+    System.out.println(Arrays.toString(inputArray1));
+    System.out.println(Arrays.toString(outputArray1));
+    float maximum = -1;
+    for (float max : inputArray1){
+        if (max>maximum){
+            maximum = max;
+        }
+    }
+    outputArray1[1] = maximum;
+    System.out.println(Arrays.toString(inputArray1));
+    System.out.println(Arrays.toString(outputArray1));
+
+    float minimum = maximum;
+    for (float min : inputArray1){
+        if (min < minimum){
+            minimum = min;
+        }
+    }
+    outputArray1[2] = minimum;
+    System.out.println(Arrays.toString(inputArray1));
+    System.out.println(Arrays.toString(outputArray1));
+
+    outputArray1[3] = outputArray1[0] / inputArray1.length;
+    System.out.println(Arrays.toString(inputArray1));
+    System.out.println(Arrays.toString(outputArray1));
+
+
+    // Задача 2
+
+    float [] inputArray2 = {4000, 8000, 15000, 16000, 23000};
+    float [] outputArray2 = new float [inputArray2.length];
+    int i = 0;
+    for (float el : inputArray2) {
+        float tax = el * 0.13f;
+        outputArray2[i] = tax;
+        i++;
+    }
+    System.out.println(Arrays.toString(inputArray2));
+    System.out.println(Arrays.toString(outputArray2));
+
+
+
+    }
+
+
+
+
+
+
+
