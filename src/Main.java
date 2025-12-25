@@ -3,46 +3,34 @@
 void main() {
     //задача 1
 
-    float[] inputArray1 = {32, 12, 44, 56, 85};
-    float[] outputArray1 = new float[4];
+    int[] inputArray1 = {32, 12, 44, 56, 85};
+    int[] outputArray1 = new int[4];
+    int maximum = -1;
+    int minimum = 10000000;
 
-    for (float sum : inputArray1) {
-        outputArray1[0] += sum;
-    }
-    System.out.println(Arrays.toString(inputArray1));
-    System.out.println(Arrays.toString(outputArray1));
-    float maximum = -1;
-    for (float max : inputArray1) {
-        if (max > maximum) {
-            maximum = max;
+    for (int element : inputArray1) {
+        outputArray1[0] += element;
+        if (element > maximum) {
+            maximum = element;
+            outputArray1[1] = maximum;
         }
-    }
-    outputArray1[1] = maximum;
-    System.out.println(Arrays.toString(inputArray1));
-    System.out.println(Arrays.toString(outputArray1));
-
-    float minimum = maximum;
-    for (float min : inputArray1) {
-        if (min < minimum) {
-            minimum = min;
+        if (element < minimum) {
+            minimum = element;
         }
+        outputArray1[2] = minimum;
+        outputArray1[3] = outputArray1[0] / inputArray1.length;
     }
-    outputArray1[2] = minimum;
-    System.out.println(Arrays.toString(inputArray1));
-    System.out.println(Arrays.toString(outputArray1));
-
-    outputArray1[3] = outputArray1[0] / inputArray1.length;
     System.out.println(Arrays.toString(inputArray1));
     System.out.println(Arrays.toString(outputArray1));
 
 
     // Задача 2
 
-    float[] inputArray2 = {4000, 8000, 15000, 16000, 23000};
-    float[] outputArray2 = new float[inputArray2.length];
+    int[] inputArray2 = {4000, 8000, 15000, 16000, 23000};
+    int[] outputArray2 = new int[inputArray2.length];
     int i = 0;
-    for (float el : inputArray2) {
-        float tax = el * 0.13f;
+    for (int el : inputArray2) {
+        int tax = el * 13 / 100;
         outputArray2[i] = tax;
         i++;
     }
