@@ -24,6 +24,7 @@ void main() {
     System.out.println(Arrays.toString(outputArray1));
 
 
+
     // Задача 2
 
     int[] inputArray2 = {4000, 8000, 15000, 16000, 23000};
